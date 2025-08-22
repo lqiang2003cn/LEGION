@@ -1,0 +1,29 @@
+HModel
+    inferType:memoVB
+    allocModel:DPMixtureModel
+        gamma0:1
+        gamma1:1
+        K:
+    obsModel:GaussObsModel
+        D:2
+        K:
+        inferType:memoVB
+        min_covar:1e-08
+        Prior:
+            nu:4
+            kappa:0.0001
+            m:[0,0]  # mean
+            B:[      # covariance
+                0.1,  0
+                0,    0.1
+            ]
+            D:2
+            K:
+        Post:
+            nu:4
+            kappa:0.0001
+            m:[0,0]  # mean
+            B:[      # covariance
+                0.1,  0
+                0,    0.1
+            ]
